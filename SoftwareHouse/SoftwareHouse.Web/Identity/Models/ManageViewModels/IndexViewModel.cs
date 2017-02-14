@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 
-namespace SoftwareHouse.Web.Models.ManageViewModels
+namespace SoftwareHouse.Web.Identity.Models.ManageViewModels
 {
     public class IndexViewModel
     {
