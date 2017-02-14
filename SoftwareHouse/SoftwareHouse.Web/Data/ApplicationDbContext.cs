@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using SoftwareHouse.Web.Identity.Models;
+using SoftwareHouse.Web.Data.Models;
 
 namespace SoftwareHouse.Web.Data
 {

@@ -12,6 +12,7 @@ using Microsoft.Extensions.Options;
 using SoftwareHouse.Web.Identity.Models;
 using SoftwareHouse.Web.Identity.Models.AccountViewModels;
 using SoftwareHouse.Web.Identity.Services;
+using SoftwareHouse.Web.Data.Models;
 
 namespace SoftwareHouse.Web.Controllers
 {

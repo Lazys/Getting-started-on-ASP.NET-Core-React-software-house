@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using SoftwareHouse.Web.Data;
 using SoftwareHouse.Web.Identity.Models;
 using SoftwareHouse.Web.Identity.Services;
+using SoftwareHouse.Web.Data.Models;
 
 namespace SoftwareHouse.Web
 {
