@@ -1,5 +1,6 @@
 ﻿const path = require('path');
 const webpack = require('webpack');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const { CheckerPlugin } = require('awesome-typescript-loader');
 
 const paths = {
@@ -45,12 +46,19 @@ const config = {
                 },
                 { 
                     test: /\.(css|scss)$/, 
-                    use: ['style-loader', 'css-loader', 'sass-loader']
+                    use: ExtractTextPlugin.extract({
+                        fallback: 'style-loader',
+                        use: ['css-loader', 'sass-loader']
+                    })
                 }
             ]
         },
         plugins: [
             new CheckerPlugin(),
+            new ExtractTextPlugin({
+                filename: 'styles/[name].css',
+                allChunks: true
+            }),
             new webpack.ProvidePlugin({ 
                 $: 'jquery', 
                 jQuery: 'jquery'
