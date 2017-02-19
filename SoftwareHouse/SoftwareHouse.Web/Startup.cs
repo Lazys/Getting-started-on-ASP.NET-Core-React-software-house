@@ -14,6 +14,8 @@ using SoftwareHouse.Web.Identity.Models;
 using SoftwareHouse.Web.Identity.Services;
 using SoftwareHouse.Web.Data.Models;
 using Microsoft.AspNetCore.SpaServices.Webpack;
+using Microsoft.AspNetCore.Http;
+using React.AspNet;
 
 namespace SoftwareHouse.Web
 {
@@ -49,6 +51,8 @@ namespace SoftwareHouse.Web
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddReact();
             services.AddMvc();
 
             // Add application services.
@@ -76,12 +80,16 @@ namespace SoftwareHouse.Web
                 app.UseExceptionHandler("/Home/Error");
             }
 
+
+            app.UseReact(config => {});
+
             app.UseStaticFiles();
 
             app.UseIdentity();
 
             // Add external authentication middleware below. To configure them please see http://go.microsoft.com/fwlink/?LinkID=532715
 
+            
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
