@@ -13,6 +13,7 @@ using SoftwareHouse.Web.Data;
 using SoftwareHouse.Web.Identity.Models;
 using SoftwareHouse.Web.Identity.Services;
 using SoftwareHouse.Web.Data.Models;
+using Microsoft.AspNetCore.SpaServices.Webpack;
 
 namespace SoftwareHouse.Web
 {
@@ -64,11 +65,11 @@ namespace SoftwareHouse.Web
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
-
-                // Browser Link is not compatible with Kestrel 1.1.0
-                // For details on enabling Browser Link, see https://go.microsoft.com/fwlink/?linkid=840936
-                // app.UseBrowserLink();
+                app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
+                {
+                    HotModuleReplacement = true,
+                    ReactHotModuleReplacement = true
+                });
             }
             else
             {
@@ -81,6 +82,7 @@ namespace SoftwareHouse.Web
 
             // Add external authentication middleware below. To configure them please see http://go.microsoft.com/fwlink/?LinkID=532715
 
+            
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
