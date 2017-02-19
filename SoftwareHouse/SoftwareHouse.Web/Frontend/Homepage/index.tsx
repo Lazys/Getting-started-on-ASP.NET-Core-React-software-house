@@ -7,3 +7,8 @@ ReactDOM.render(
     <Demo blogName={ 'PoznajProgramowanie.pl' } />, 
     document.getElementById('react-homepage-root')
 );
+
+ declare var module: any;
+ if (module.hot) {
+     module.hot.accept();
+ }
