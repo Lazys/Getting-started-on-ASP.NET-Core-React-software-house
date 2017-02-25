@@ -32,17 +32,35 @@ const config = {
             rules: [
                 { 
                     test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|eot|ttf)$/, 
-                    use: 'url-loader?limit=50000&name=assets/[name]_[hash].[ext]'
+                    use: [
+                        {
+                            loader: 'url-loader',
+                            options: {
+                                limit: 50000,
+                                name: 'assets/[name]_[hash].[ext]'
+                            }
+                        }
+                    ]
                 },
                 {
                     test: /\.ts(x?)$/,
                     exclude: /node_modules/,
-                    loaders: ['babel-loader', 'awesome-typescript-loader?silent=true']
+                    use: [
+                        { loader: 'babel-loader' },
+                        {
+                            loader: 'awesome-typescript-loader',
+                            options: {
+                                silent: true
+                            }
+                        },
+                    ]
                 },
                 {
                     test: /\.js$/,
                     exclude: /node_modules/,
-                    loader: 'babel-loader'
+                    use: [
+                        { loader: 'babel-loader' }
+                    ]
                 },
                 { 
                     test: /\.(css|scss)$/, 

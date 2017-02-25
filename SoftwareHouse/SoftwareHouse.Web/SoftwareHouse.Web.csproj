@@ -33,5 +33,9 @@
     <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="1.0.0-msbuild3-final" />
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0-msbuild3-final" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\dist\" />
+    <Folder Include="wwwroot\dist\" />
+  </ItemGroup>
 
 </Project>
