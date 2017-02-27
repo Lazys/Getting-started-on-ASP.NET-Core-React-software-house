@@ -1,0 +1,36 @@
+{
+  "name": "software-house",
+  "version": "0.0.1",
+  "description": "Software House - ASP.NET Core & React tutorial",
+  "scripts": {},
+  "devDependencies": {
+    "@types/react": "^15.0.10",
+    "@types/react-dom": "^0.14.23",
+    "aspnet-webpack": "^1.0.27",
+    "aspnet-webpack-react": "^1.0.5",
+    "awesome-typescript-loader": "^3.0.4",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "file-loader": "^0.10.0",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.1",
+    "style-loader": "^0.13.1",
+    "typescript": "^2.2.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.2.1",
+    "webpack-hot-middleware": "^2.17.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "engines": {
+    "node": ">=6.9.5"
+  }
+}
