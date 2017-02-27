@@ -36,6 +36,7 @@
   <ItemGroup>
     <ProjectReference Include="..\SoftwareHouse.DataAccess\SoftwareHouse.DataAccess.csproj" />
     <ProjectReference Include="..\SoftwareHouse.Services\SoftwareHouse.Services.csproj" />
+    <Folder Include="wwwroot\dist\" />
   </ItemGroup>
 
 </Project>

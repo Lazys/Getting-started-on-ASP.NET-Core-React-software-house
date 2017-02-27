@@ -4,7 +4,7 @@ import * as React from 'react';
 import Demo from './Components/Demo/Demo';
 
 ReactDOM.render(
-    <Demo blogName={ 'PoznajProgramowanie.pl' } />, 
+    <Demo />, 
     document.getElementById('react-homepage-root')
 );
 
