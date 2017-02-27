@@ -9,6 +9,8 @@ using SoftwareHouse.Web.Identity.Services;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using SoftwareHouse.DataAccess;
 using SoftwareHouse.DataAccess.Models;
+using SoftwareHouse.DataAccess.Interfaces;
+using SoftwareHouse.DataAccess.Repositories;
 
 namespace SoftwareHouse.Web
 {
@@ -49,6 +51,8 @@ namespace SoftwareHouse.Web
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+
+            services.AddScoped<IProjectsRepository, ProjectsRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
