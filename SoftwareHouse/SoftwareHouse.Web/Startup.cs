@@ -11,6 +11,8 @@ using SoftwareHouse.DataAccess;
 using SoftwareHouse.DataAccess.Models;
 using SoftwareHouse.DataAccess.Interfaces;
 using SoftwareHouse.DataAccess.Repositories;
+using SoftwareHouse.Services.Interfaces;
+using SoftwareHouse.Services.Services;
 
 namespace SoftwareHouse.Web
 {
@@ -52,7 +54,11 @@ namespace SoftwareHouse.Web
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
 
+            // Repositories
             services.AddScoped<IProjectsRepository, ProjectsRepository>();
+
+            // Services
+            services.AddScoped<IProjectsService, ProjectsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
