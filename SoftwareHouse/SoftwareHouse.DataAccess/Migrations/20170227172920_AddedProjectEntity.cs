@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace SoftwareHouse.Web.Data.Migrations
+namespace SoftwareHouse.DataAccess.Migrations
 {
     public partial class AddedProjectEntity : Migration
     {

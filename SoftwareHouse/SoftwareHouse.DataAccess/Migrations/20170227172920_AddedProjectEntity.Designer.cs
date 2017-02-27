@@ -3,9 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using SoftwareHouse.Web.Data;
 
-namespace SoftwareHouse.Web.Data.Migrations
+namespace SoftwareHouse.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20170227172920_AddedProjectEntity")]
