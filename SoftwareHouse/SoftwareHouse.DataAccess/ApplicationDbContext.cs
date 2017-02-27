@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using SoftwareHouse.Web.Data.Models;
+using SoftwareHouse.DataAccess.Models;
 
-namespace SoftwareHouse.Web.Data
+namespace SoftwareHouse.DataAccess
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
