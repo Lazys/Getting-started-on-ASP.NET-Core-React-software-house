@@ -1,7 +1,9 @@
 ﻿using SoftwareHouse.Contract.DataContracts;
 using SoftwareHouse.Contract.Interfaces;
+using SoftwareHouse.DataAccess.Models;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace SoftwareHouse.DataAccess.Repositories
 {
@@ -25,6 +27,38 @@ namespace SoftwareHouse.DataAccess.Repositories
                                           CreationDate = x.CreationDate
                                       })
                                       .ToList();
+        }
+
+        public ProjectDto GetByName(string projectName)
+        {
+            var existingProject = _dbContext.Projects.FirstOrDefault(x => x.Name.ToLower() == projectName.ToLower());
+
+            if (existingProject != null)
+            {
+                return new ProjectDto
+                {
+                    Id = existingProject.Id,
+                    Name = existingProject.Name,
+                    Description = existingProject.Description,
+                    IsDeleted = existingProject.IsDeleted,
+                    CreationDate = existingProject.CreationDate
+                };
+            }
+
+            return null;
+        }
+
+        public void Add(ProjectDto project)
+        {
+            _dbContext.Projects.Add(new Project
+            {
+                Name = project.Name,
+                Description = project.Description,
+                IsDeleted = project.IsDeleted,
+                CreationDate = project.CreationDate
+            });
+
+            _dbContext.SaveChanges();
         }
     }
 }
