@@ -13,6 +13,7 @@ using SoftwareHouse.DataAccess.Interfaces;
 using SoftwareHouse.DataAccess.Repositories;
 using SoftwareHouse.Services.Interfaces;
 using SoftwareHouse.Services.Services;
+using SoftwareHouse.Contract.Interfaces;
 
 namespace SoftwareHouse.Web
 {
