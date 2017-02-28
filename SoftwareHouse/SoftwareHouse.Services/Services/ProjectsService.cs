@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
-using SoftwareHouse.Services.DataContracts;
-using SoftwareHouse.Services.Interfaces;
-using SoftwareHouse.DataAccess.Interfaces;
-using System.Linq;
+using SoftwareHouse.Contract.Interfaces;
+using SoftwareHouse.Contract.DataContracts;
 
 namespace SoftwareHouse.Services.Services
 {
@@ -17,16 +15,7 @@ namespace SoftwareHouse.Services.Services
 
         public List<ProjectDto> GetAll()
         {
-            return _projectsRepository.GetAll()
-                                      .Select(x => new ProjectDto
-                                      {
-                                          Id = x.Id,
-                                          Name = x.Name,
-                                          Description = x.Description,
-                                          IsDeleted = x.IsDeleted,
-                                          CreationDate = x.CreationDate
-                                      })
-                                      .ToList();
+            return _projectsRepository.GetAll();
         }
     }
 }
