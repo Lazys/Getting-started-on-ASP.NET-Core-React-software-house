@@ -34,6 +34,7 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0-msbuild3-final" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SoftwareHouse.Contract\SoftwareHouse.Contract.csproj" />
     <ProjectReference Include="..\SoftwareHouse.DataAccess\SoftwareHouse.DataAccess.csproj" />
     <ProjectReference Include="..\SoftwareHouse.Services\SoftwareHouse.Services.csproj" />
   </ItemGroup>

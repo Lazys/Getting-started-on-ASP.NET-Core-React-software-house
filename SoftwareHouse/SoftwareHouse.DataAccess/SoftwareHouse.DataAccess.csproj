@@ -13,4 +13,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="1.1.0-preview4-final" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SoftwareHouse.Contract\SoftwareHouse.Contract.csproj" />
+  </ItemGroup>
+
 </Project>
