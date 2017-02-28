@@ -1,7 +1,7 @@
-﻿using SoftwareHouse.Services.DataContracts;
+﻿using SoftwareHouse.Contract.DataContracts;
 using System.Collections.Generic;
 
-namespace SoftwareHouse.Services.Interfaces
+namespace SoftwareHouse.Contract.Interfaces
 {
     public interface IProjectsService
     {
