@@ -32,5 +32,10 @@ namespace SoftwareHouse.Services.Services
 
             return CommonResult.Success();
         }
+
+        public void Delete(int id)
+        {
+            _projectsRepository.Delete(id);
+        }
     }
 }
