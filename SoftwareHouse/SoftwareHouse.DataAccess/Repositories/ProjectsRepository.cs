@@ -1,5 +1,5 @@
-﻿using SoftwareHouse.DataAccess.Interfaces;
-using SoftwareHouse.DataAccess.Models;
+﻿using SoftwareHouse.Contract.DataContracts;
+using SoftwareHouse.Contract.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -14,9 +14,17 @@ namespace SoftwareHouse.DataAccess.Repositories
             _dbContext = dbContext;
         }
 
-        public List<Project> GetAll()
+        public List<ProjectDto> GetAll()
         {
-            return _dbContext.Projects.ToList();
+            return _dbContext.Projects.Select(x => new ProjectDto
+                                      {
+                                          Id = x.Id,
+                                          Name = x.Name,
+                                          Description = x.Description,
+                                          IsDeleted = x.IsDeleted,
+                                          CreationDate = x.CreationDate
+                                      })
+                                      .ToList();
         }
     }
 }
