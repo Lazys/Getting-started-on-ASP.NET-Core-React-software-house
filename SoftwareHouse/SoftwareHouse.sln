@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareHouse.DataAccess", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareHouse.Services", "SoftwareHouse.Services\SoftwareHouse.Services.csproj", "{05BF1DC1-698D-42F7-9D0C-2CC4340A4B6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareHouse.Contract", "SoftwareHouse.Contract\SoftwareHouse.Contract.csproj", "{49E82D6D-7144-43BD-9B8D-162D370EBBD3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{05BF1DC1-698D-42F7-9D0C-2CC4340A4B6D}.Release|x64.Build.0 = Release|x64
 		{05BF1DC1-698D-42F7-9D0C-2CC4340A4B6D}.Release|x86.ActiveCfg = Release|x86
 		{05BF1DC1-698D-42F7-9D0C-2CC4340A4B6D}.Release|x86.Build.0 = Release|x86
+		{49E82D6D-7144-43BD-9B8D-162D370EBBD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49E82D6D-7144-43BD-9B8D-162D370EBBD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49E82D6D-7144-43BD-9B8D-162D370EBBD3}.Debug|x64.ActiveCfg = Debug|x64
+		{49E82D6D-7144-43BD-9B8D-162D370EBBD3}.Debug|x64.Build.0 = Debug|x64
+		{49E82D6D-7144-43BD-9B8D-162D370EBBD3}.Debug|x86.ActiveCfg = Debug|x86
+		{49E82D6D-7144-43BD-9B8D-162D370EBBD3}.Debug|x86.Build.0 = Debug|x86
+		{49E82D6D-7144-43BD-9B8D-162D370EBBD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49E82D6D-7144-43BD-9B8D-162D370EBBD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49E82D6D-7144-43BD-9B8D-162D370EBBD3}.Release|x64.ActiveCfg = Release|x64
+		{49E82D6D-7144-43BD-9B8D-162D370EBBD3}.Release|x64.Build.0 = Release|x64
+		{49E82D6D-7144-43BD-9B8D-162D370EBBD3}.Release|x86.ActiveCfg = Release|x86
+		{49E82D6D-7144-43BD-9B8D-162D370EBBD3}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

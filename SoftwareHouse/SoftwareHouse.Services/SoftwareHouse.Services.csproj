@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SoftwareHouse.Contract\SoftwareHouse.Contract.csproj" />
     <ProjectReference Include="..\SoftwareHouse.DataAccess\SoftwareHouse.DataAccess.csproj" />
   </ItemGroup>
 
