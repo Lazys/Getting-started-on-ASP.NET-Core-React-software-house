@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
@@ -9,10 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using SoftwareHouse.Web.Identity.Models;
 using SoftwareHouse.Web.Identity.Models.AccountViewModels;
 using SoftwareHouse.Web.Identity.Services;
-using SoftwareHouse.Web.Data.Models;
+using SoftwareHouse.DataAccess.Models;
 
 namespace SoftwareHouse.Web.Controllers
 {

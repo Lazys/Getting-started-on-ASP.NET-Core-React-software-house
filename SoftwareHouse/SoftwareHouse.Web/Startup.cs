@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using SoftwareHouse.Web.Data;
-using SoftwareHouse.Web.Identity.Models;
 using SoftwareHouse.Web.Identity.Services;
-using SoftwareHouse.Web.Data.Models;
 using Microsoft.AspNetCore.SpaServices.Webpack;
+using SoftwareHouse.DataAccess;
+using SoftwareHouse.DataAccess.Models;
+using SoftwareHouse.DataAccess.Repositories;
+using SoftwareHouse.Services.Services;
+using SoftwareHouse.Contract.Interfaces;
 
 namespace SoftwareHouse.Web
 {
@@ -54,6 +52,12 @@ namespace SoftwareHouse.Web
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+
+            // Repositories
+            services.AddScoped<IProjectsRepository, ProjectsRepository>();
+
+            // Services
+            services.AddScoped<IProjectsService, ProjectsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
