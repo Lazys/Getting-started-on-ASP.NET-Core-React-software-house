@@ -2,12 +2,45 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div id="react-homepage-root"></div>
-
 @section Styles {
-    <link href="~/dist/styles/homepage.css" rel="stylesheet" />
+    <link href="~/dist/styles/home.css" rel="stylesheet" />
 }
 
-@section Scripts {
-    <script src="~/dist/homepage.js"></script>
-}
+<div class="row">
+    <div class="col-md-12">
+        <div class="row banner">
+            <div class="col-md-12">
+                <img class="img-responsive center-block banner-logo" src="~/images/Logo-big.png" />
+                <h2 class="text-center banner-text">Software House Manager</h2>
+                <p class="text-center">Track, measure and organize everything related to your software house.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 category">
+        <h3 class="category-header">ASP.NET Core</h3>
+        <p class="category-content">
+            The newest member of ASP.NET family is being described as a 
+            lean and composable framework for building web and cloud applications. 
+            Great performance, modularity, tools and a lot of other cool 
+            features convinced us to make this choice.
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h3 class="category-header">React</h3>
+        <p class="category-content">
+            React is well-known front-end library for building user interfaces. By using React
+            we can be fast and lightweight at the same time. Also, flexibility of this library
+            is super important for us, because here we are using server-side routing.
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h3 class="category-header">PoznajProgramowanie.pl</h3>
+        <p class="category-content">
+            PoznajProgramowanie.pl is a blog created by two passinate programmers, who'd like
+            to share their passion to software development with others, show some tips'n'tricks
+            from our industry and teach you how to be succesful programmer.
+        </p>
+    </div>
+</div>
