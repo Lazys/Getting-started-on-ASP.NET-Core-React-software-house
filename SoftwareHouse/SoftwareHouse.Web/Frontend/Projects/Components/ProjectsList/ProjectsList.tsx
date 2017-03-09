@@ -1,25 +1,12 @@
 ﻿import * as React from 'react';
-import './ProjectsList.scss';
 
-class ProjectsList extends React.Component<any, any> {
+interface ProjectsListProps {
+    projects: number[]
+}
 
-    public numbers: number[] = [1, 2, 3, 4, 5];
+class ProjectsList extends React.Component<ProjectsListProps, any> {
 
-    public render() {
-
-        return (
-            <div className={'ProjectsList'} >
-                <h3>Projects List</h3>
-                <ul>
-                    {this.numbers.map((number) =>
-                        <li key={number.toString()}>
-                            {number}
-                        </li>
-                    )}
-                </ul>
-            </div>
-        )
-    }
+  
 }
 
 export default ProjectsList;

@@ -1,10 +1,10 @@
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 
-import ProjectsList from './Components/ProjectsList/ProjectsList';
+import ProjectsListContainer from './Components/ProjectsListContainer/ProjectsListContainer';
 
 ReactDOM.render(
-    <ProjectsList />, 
+    <ProjectsListContainer />, 
     document.getElementById('react-root')
 );
 
