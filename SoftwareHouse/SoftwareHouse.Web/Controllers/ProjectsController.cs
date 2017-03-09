@@ -9,8 +9,16 @@ namespace SoftwareHouse.Web.Controllers
 {
     public class ProjectsController : Controller
     {
+        [HttpGet]
         [Authorize]
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        [Authorize]
+        public IActionResult Create()
         {
             return View();
         }

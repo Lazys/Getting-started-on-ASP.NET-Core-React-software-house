@@ -1,0 +1,15 @@
+﻿@import '../../../Shared/Styles/fonts.scss';
+
+.ProjectsList {
+    @include custom-font();
+}
+
+.ProjectsList-summary {
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 5px;
+}
+
+.ProjectList-summaryText {
+    position: relative;
+    top: 10px;
+}

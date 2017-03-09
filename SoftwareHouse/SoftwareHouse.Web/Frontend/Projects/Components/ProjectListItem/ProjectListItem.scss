@@ -1,0 +1,23 @@
+﻿.ProjectsListItem {
+    background-color: #fdfdfd;
+    border: 1px solid #efefef;
+    padding: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+        .ProjectsListItem-deleteBtn {
+            display: block;
+        }
+    }
+}
+
+.ProjectsListItem-deleteBtn {
+    display: none;
+    background-color: red;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+}

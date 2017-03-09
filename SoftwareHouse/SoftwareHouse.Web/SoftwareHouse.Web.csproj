@@ -11,6 +11,7 @@
   <PropertyGroup>
     <UserSecretsId>aspnet-SoftwareHouse.Web-39aaba63-883f-428f-8ed2-0f6ff0533dba</UserSecretsId>
   </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.0" />
@@ -40,9 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\dist\" />
-    <Folder Include="wwwroot\dist\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="wwwroot\images\List.png" />
     <None Include="wwwroot\images\Logo-big.png" />
   </ItemGroup>
 </Project>
