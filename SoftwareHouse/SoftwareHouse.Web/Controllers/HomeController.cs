@@ -13,7 +13,8 @@ namespace SoftwareHouse.Web.Controllers
             if (User.Identity.IsAuthenticated)
             {
                 return RedirectToAction(nameof(ProjectsController.Index), "Projects");
-            } else
+            }
+            else
             {
                 return View();
             }

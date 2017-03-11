@@ -48,14 +48,14 @@ namespace SoftwareHouse.DataAccess.Repositories
             return null;
         }
 
-        public void Add(ProjectDto project)
+        public void Add(AddProjectDto project)
         {
             _dbContext.Projects.Add(new Project
             {
                 Name = project.Name,
                 Description = project.Description,
-                IsDeleted = project.IsDeleted,
-                CreationDate = project.CreationDate
+                IsDeleted = false,
+                CreationDate = DateTime.Now
             });
 
             _dbContext.SaveChanges();

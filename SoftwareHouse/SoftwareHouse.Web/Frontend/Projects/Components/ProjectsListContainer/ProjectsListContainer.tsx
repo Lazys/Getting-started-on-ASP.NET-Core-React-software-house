@@ -11,17 +11,13 @@ interface ProjectsListState {
 
 class ProjectsListContainer extends React.Component<any, ProjectsListState> {
 
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
     }
 
     public componentWillMount() {
         this.setState((state, props) => {
-            state.projects = [
-                { Id: 1, Name: 'aaa', Description: 'test 1', CreationDate: new Date() },
-                { Id: 2, Name: 'bbb', Description: 'test 2', CreationDate: new Date() },
-                { Id: 3, Name: 'ccc', Description: 'test 3', CreationDate: new Date() }
-            ]
+            state.projects = []
         });
     }
 

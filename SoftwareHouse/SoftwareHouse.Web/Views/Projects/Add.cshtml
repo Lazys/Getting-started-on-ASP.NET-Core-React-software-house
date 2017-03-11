@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Create project";
+}
+@model ProjectCreateViewModel
+
+<div class="row">
+    <div class="col-md-6 col-md-push-3">
+        <section>
+            <form asp-controller="Projects" asp-action="Add" method="post" class="form-horizontal">
+                <h4>Create project.</h4>
+                <hr />
+                <div class="form-group">
+                    <label asp-for="Name" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <input asp-for="Name" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <textarea asp-for="Description" cols="3" rows="5" class="form-control" ></textarea>
+                    </div>
+                </div>
+
+                @if(Model.ErrorMessage != String.Empty)
+                {
+                    <p>@Model.ErrorMessage</p>
+                }
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button type="submit" class="btn btn-success pull-right">Create</button>
+                    </div>
+                </div>
+
+            </form>
+        </section>
+    </div>
+</div>

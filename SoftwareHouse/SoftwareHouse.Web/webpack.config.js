@@ -16,6 +16,7 @@ const config = {
                 'bootstrap', 
                 'bootstrap/dist/css/bootstrap.css', 
                 'react',
+                'moment',
                 'react-dom', 
                 'jquery'
             ]
@@ -79,11 +80,12 @@ const config = {
             }),
             new webpack.ProvidePlugin({ 
                 $: 'jquery', 
-                jQuery: 'jquery'
+                jQuery: 'jquery',
+                moment: 'moment'
             }),
             new webpack.optimize.CommonsChunkPlugin({
                 name: "commons",
-                filename: "commons.js",
+                chunks: ['projects', 'libs']
             }),
             new webpack.SourceMapDevToolPlugin({
                 moduleFilenameTemplate: path.relative(paths.outputDir, '[resourcePath]')

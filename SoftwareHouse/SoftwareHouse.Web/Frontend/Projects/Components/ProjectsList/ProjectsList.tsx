@@ -14,7 +14,7 @@ interface ProjectsListProps {
 class ProjectsList extends React.Component<ProjectsListProps, any> {
 
     private paths = {
-        createProjectUrl: '/Projects/Create'
+        createProjectUrl: '/Projects/Add'
     };
 
     render() {
@@ -26,7 +26,7 @@ class ProjectsList extends React.Component<ProjectsListProps, any> {
                             <p className='ProjectList-summaryText'>Number of projects: <strong>{this.props.projects.length}</strong></p>
                         </div>
                         <div className='col-md-6 padding-none'>
-                            <Button link={true} href={this.paths.createProjectUrl} extraClassNames={['btn-success', 'pull-right']}>Create project</Button>
+                            <Button link={true} href={this.paths.createProjectUrl} extraClassNames={['btn-success', 'pull-right']}>Start new project</Button>
                         </div>
                     </div>
                     <div className='ProjectsList-content row'>

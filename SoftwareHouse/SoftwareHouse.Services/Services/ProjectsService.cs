@@ -2,6 +2,7 @@
 using SoftwareHouse.Contract.Interfaces;
 using SoftwareHouse.Contract.DataContracts;
 using SoftwareHouse.Contract.Common;
+using System;
 
 namespace SoftwareHouse.Services.Services
 {
@@ -19,13 +20,23 @@ namespace SoftwareHouse.Services.Services
             return _projectsRepository.GetAll();
         }
 
-        public CommonResult Add(ProjectDto project)
+        public CommonResult Add(AddProjectDto project)
         {
+            if (string.IsNullOrEmpty(project.Name))
+            {
+                return CommonResult.Failure("Cannot create project without name provided.");
+            }
+
+            if (string.IsNullOrEmpty(project.Description))
+            {
+                return CommonResult.Failure("Cannot create project without description provided.");
+            }
+
             var nameExists = _projectsRepository.GetByName(project.Name) == null ? false : true;
 
             if (nameExists)
             {
-                return CommonResult.Failure("Project name already exists");
+                return CommonResult.Failure("Project name already exists.");
             }
 
             _projectsRepository.Add(project);

@@ -1,4 +1,5 @@
 ﻿import * as React from 'react';
+import * as moment from 'moment';
 
 import './ProjectListItem.scss';
 import Project from '../../Models/Project';
@@ -12,10 +13,11 @@ class ProjectsListItem extends React.Component<ProjectListItemProps, any> {
     render() {
         return (
             <section className='ProjectsListItem'>
-                <p>{this.props.project.Id}</p>
+                <p className='ProjectsListItem-date'>
+                    <span className='glyphicon glyphicon-calendar'></span> { moment(this.props.project.CreationDate).format('DD-MM-YYYY') }
+                </p>
                 <p>{this.props.project.Name}</p>
                 <p>{this.props.project.Description}</p>
-                <div className='ProjectsListItem-deleteBtn'>Usuń</div>
             </section>
         )
     }
@@ -23,3 +25,4 @@ class ProjectsListItem extends React.Component<ProjectListItemProps, any> {
 }
 
 export default ProjectsListItem;
+

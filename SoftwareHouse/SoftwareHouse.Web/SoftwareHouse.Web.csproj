@@ -40,9 +40,6 @@
     <ProjectReference Include="..\SoftwareHouse.Services\SoftwareHouse.Services.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="wwwroot\dist\" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="wwwroot\images\List.png" />
     <None Include="wwwroot\images\Logo-big.png" />
   </ItemGroup>
