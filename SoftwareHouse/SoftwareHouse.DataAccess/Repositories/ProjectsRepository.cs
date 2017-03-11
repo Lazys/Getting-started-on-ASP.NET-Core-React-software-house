@@ -72,25 +72,18 @@ namespace SoftwareHouse.DataAccess.Repositories
             _dbContext.SaveChanges();
         }
 
-        public CommonResult<ProjectDto> GetById(int id)
+        public ProjectDto GetById(int id)
         {
             var project = _dbContext.Projects.First(x => x.Id == id);
 
-            if (project == null || project.IsDeleted)
+            return new ProjectDto
             {
-                return CommonResult<ProjectDto>.Failure<ProjectDto>("Cannot retrieve given project.");
-            }
-            else
-            {
-                return CommonResult<ProjectDto>.Success<ProjectDto>(new ProjectDto
-                {
-                    Id = project.Id,
-                    Name = project.Name,
-                    Description = project.Description,
-                    CreationDate = project.CreationDate,
-                    IsDeleted = project.IsDeleted
-                });
-            }
+                Id = project.Id,
+                Name = project.Name,
+                Description = project.Description,
+                CreationDate = project.CreationDate,
+                IsDeleted = project.IsDeleted
+            };
         }
     }
 }

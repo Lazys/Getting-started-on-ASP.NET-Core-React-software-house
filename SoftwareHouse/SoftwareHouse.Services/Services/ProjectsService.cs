@@ -52,7 +52,16 @@ namespace SoftwareHouse.Services.Services
 
         public CommonResult<ProjectDto> GetById(int id)
         {
-            return _projectsRepository.GetById(id);
+            var project = _projectsRepository.GetById(id);
+
+            if (project == null || project.IsDeleted)
+            {
+                return CommonResult<ProjectDto>.Failure<ProjectDto>("Problem occured during fetching project with given id.");
+            }
+            else
+            {
+                return CommonResult<ProjectDto>.Success<ProjectDto>(project);
+            }
         }
     }
 }
