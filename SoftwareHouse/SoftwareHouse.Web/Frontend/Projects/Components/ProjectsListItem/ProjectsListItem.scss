@@ -1,0 +1,26 @@
+﻿.ProjectsListItem {
+    display: block;
+    text-decoration: none;
+    color: #717171;
+    background-color: #fcfcfc;
+    border: 1px solid #efefef;
+    padding: 10px;
+    margin: 10px 0;
+    position: relative;
+
+    &:hover, &:focus {
+        background-color: #fefefe;
+        color: #717171;
+        text-decoration: none;
+    }
+}
+
+.ProjectsListItem-summary {
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.ProjectsListItem-name {
+    font-weight: 700;
+}

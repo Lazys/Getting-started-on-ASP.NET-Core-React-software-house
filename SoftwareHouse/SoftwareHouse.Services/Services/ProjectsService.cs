@@ -3,6 +3,7 @@ using SoftwareHouse.Contract.Interfaces;
 using SoftwareHouse.Contract.DataContracts;
 using SoftwareHouse.Contract.Common;
 using System;
+using System.Linq;
 
 namespace SoftwareHouse.Services.Services
 {
@@ -32,9 +33,9 @@ namespace SoftwareHouse.Services.Services
                 return CommonResult.Failure("Cannot create project without description provided.");
             }
 
-            var nameExists = _projectsRepository.GetByName(project.Name) == null ? false : true;
+            var existingProject = _projectsRepository.GetByName(project.Name);
 
-            if (nameExists)
+            if (existingProject != null && !existingProject.IsDeleted && existingProject.Name == project.Name)
             {
                 return CommonResult.Failure("Project name already exists.");
             }
@@ -47,6 +48,11 @@ namespace SoftwareHouse.Services.Services
         public void Delete(int id)
         {
             _projectsRepository.Delete(id);
+        }
+
+        public CommonResult<ProjectDto> GetById(int id)
+        {
+            return _projectsRepository.GetById(id);
         }
     }
 }

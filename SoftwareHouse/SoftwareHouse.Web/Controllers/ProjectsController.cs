@@ -26,10 +26,18 @@ namespace SoftwareHouse.Web.Controllers
             return View();
         }
 
-        [HttpGet("/{id}")]
-        public IActionResult Index(int id)
+        [HttpGet]
+        public IActionResult Details(int id)
         {
-            return View();
+            var result = _projectsService.GetById(id);
+
+            return View(new ProjectViewModel()
+            {
+                Id = result.Item.Id,
+                Name = result.Item.Name,
+                Description = result.Item.Description,
+                CreationDate = result.Item.CreationDate.Date.ToString("dd-MM-yyyy")
+            });
         }
 
         [HttpGet]
@@ -56,6 +64,14 @@ namespace SoftwareHouse.Web.Controllers
                 viewModel.ErrorMessage = result.ErrorMessage;
                 return View(viewModel);
             }
+        }
+
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            _projectsService.Delete(id);
+
+            return RedirectToAction(nameof(ProjectsController.Index), "Projects");
         }
     }
 }

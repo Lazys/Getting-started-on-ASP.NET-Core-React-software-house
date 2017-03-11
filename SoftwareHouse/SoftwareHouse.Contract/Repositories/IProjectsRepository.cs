@@ -1,5 +1,6 @@
 ﻿using SoftwareHouse.Contract.DataContracts;
 using System.Collections.Generic;
+using SoftwareHouse.Contract.Common;
 
 namespace SoftwareHouse.Contract.Interfaces
 {
@@ -9,5 +10,6 @@ namespace SoftwareHouse.Contract.Interfaces
         ProjectDto GetByName(string projectName);
         void Add(AddProjectDto project);
         void Delete(int id);
+        CommonResult<ProjectDto> GetById(int id);
     }
 }
