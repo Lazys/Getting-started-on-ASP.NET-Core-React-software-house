@@ -1,5 +1,4 @@
 ﻿import * as React from 'react';
-
 import Project from '../../Models/Project';
 
 import ProjectsList from '../ProjectsList/ProjectsList';
@@ -13,12 +12,25 @@ class ProjectsListContainer extends React.Component<any, ProjectsListState> {
 
     constructor() {
         super();
+
+        this.state = {
+            projects: []
+        };
     }
 
     public componentWillMount() {
-        this.setState((state, props) => {
-            state.projects = []
-        });
+        fetch('/Api/Projects')
+            .then((response) => {
+                return response.text();
+            })
+            .then((data) => {
+                let projects = JSON.parse(data);
+                debugger;
+                
+                this.setState((state, props) => {
+                    state.projects = projects;
+                });
+            });
     }
 
     public render() {

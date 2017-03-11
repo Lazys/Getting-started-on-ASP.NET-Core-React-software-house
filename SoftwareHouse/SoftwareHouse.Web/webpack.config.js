@@ -15,10 +15,9 @@ const config = {
             libs: [
                 'bootstrap', 
                 'bootstrap/dist/css/bootstrap.css', 
+                'jquery',
                 'react',
-                'moment',
-                'react-dom', 
-                'jquery'
+                'react-dom'
             ]
         },
         resolve: { 

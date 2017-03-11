@@ -6,7 +6,6 @@
   "devDependencies": {
     "@types/react": "^15.0.10",
     "@types/react-dom": "^0.14.23",
-    "@types/moment": "2.13.0",
     "aspnet-webpack": "^1.0.27",
     "aspnet-webpack-react": "^1.0.5",
     "awesome-typescript-loader": "^3.0.4",

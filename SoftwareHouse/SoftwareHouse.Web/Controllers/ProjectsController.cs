@@ -26,7 +26,7 @@ namespace SoftwareHouse.Web.Controllers
             return View();
         }
 
-        [HttpGet]
+        [HttpGet("/{id}")]
         public IActionResult Index(int id)
         {
             return View();
