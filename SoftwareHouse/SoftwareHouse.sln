@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareHouse.Services", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareHouse.Contract", "SoftwareHouse.Contract\SoftwareHouse.Contract.csproj", "{49E82D6D-7144-43BD-9B8D-162D370EBBD3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareHouse.Tests", "SoftwareHouse.Tests\SoftwareHouse.Tests.csproj", "{C450FE96-CB68-4B3A-B523-85A043D7F4B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,18 @@ Global
 		{49E82D6D-7144-43BD-9B8D-162D370EBBD3}.Release|x64.Build.0 = Release|x64
 		{49E82D6D-7144-43BD-9B8D-162D370EBBD3}.Release|x86.ActiveCfg = Release|x86
 		{49E82D6D-7144-43BD-9B8D-162D370EBBD3}.Release|x86.Build.0 = Release|x86
+		{C450FE96-CB68-4B3A-B523-85A043D7F4B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C450FE96-CB68-4B3A-B523-85A043D7F4B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C450FE96-CB68-4B3A-B523-85A043D7F4B7}.Debug|x64.ActiveCfg = Debug|x64
+		{C450FE96-CB68-4B3A-B523-85A043D7F4B7}.Debug|x64.Build.0 = Debug|x64
+		{C450FE96-CB68-4B3A-B523-85A043D7F4B7}.Debug|x86.ActiveCfg = Debug|x86
+		{C450FE96-CB68-4B3A-B523-85A043D7F4B7}.Debug|x86.Build.0 = Debug|x86
+		{C450FE96-CB68-4B3A-B523-85A043D7F4B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C450FE96-CB68-4B3A-B523-85A043D7F4B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C450FE96-CB68-4B3A-B523-85A043D7F4B7}.Release|x64.ActiveCfg = Release|x64
+		{C450FE96-CB68-4B3A-B523-85A043D7F4B7}.Release|x64.Build.0 = Release|x64
+		{C450FE96-CB68-4B3A-B523-85A043D7F4B7}.Release|x86.ActiveCfg = Release|x86
+		{C450FE96-CB68-4B3A-B523-85A043D7F4B7}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
