@@ -1,0 +1,41 @@
+@{
+    ViewData["Title"] = "Project details";
+}
+@model ProjectViewModel
+
+@section Styles {
+    <link href="~/dist/styles/projects.css" rel="stylesheet" />
+}
+
+<div class="row">
+    <div class="col-md-8 col-md-push-2">
+        <section>
+            <h4>Project details</h4>
+            <hr />
+            <div class="ProjectsListItem row">
+                <div class="col-md-12">
+                    <div class="ProjectsListItem-summary row">
+                        <div class="col-md-6 padding-none">
+                            <span class="ProjectsListItem-name">@Model.Name</span>
+                        </div>
+                        <div class="col-md-6 padding-none">
+                            <span class="pull-right">
+                                <span class="glyphicon glyphicon-calendar"></span> @Model.CreationDate
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 padding-none">
+                            <span class="ProjectsListItem-description">@Model.Description</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form action="/Projects/Delete/@Model.Id" method="post">
+                <button type="submit" class="btn btn-danger pull-right">
+                    <span class="glyphicon glyphicon-remove"></span> Delete this project
+                </button>
+            </form>
+        </section>
+    </div>
+</div>

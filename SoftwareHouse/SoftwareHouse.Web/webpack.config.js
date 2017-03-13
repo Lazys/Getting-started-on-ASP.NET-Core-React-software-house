@@ -9,15 +9,15 @@ const paths = {
 
 const config = {
         entry: {
-            // Bundles used on specific pages
-            homepage: './Frontend/Homepage/index.tsx',
+            home: './Frontend/Home/home.scss',
+            projects: './Frontend/Projects/index.tsx',
             // Common libraries
             libs: [
                 'bootstrap', 
                 'bootstrap/dist/css/bootstrap.css', 
+                'jquery',
                 'react',
-                'react-dom', 
-                'jquery'
+                'react-dom'
             ]
         },
         resolve: { 
@@ -79,11 +79,12 @@ const config = {
             }),
             new webpack.ProvidePlugin({ 
                 $: 'jquery', 
-                jQuery: 'jquery'
+                jQuery: 'jquery',
+                moment: 'moment'
             }),
             new webpack.optimize.CommonsChunkPlugin({
                 name: "commons",
-                filename: "commons.js",
+                chunks: ['projects', 'libs']
             }),
             new webpack.SourceMapDevToolPlugin({
                 moduleFilenameTemplate: path.relative(paths.outputDir, '[resourcePath]')

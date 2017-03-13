@@ -4,6 +4,7 @@ using SoftwareHouse.DataAccess.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using SoftwareHouse.Contract.Common;
 
 namespace SoftwareHouse.DataAccess.Repositories
 {
@@ -18,15 +19,17 @@ namespace SoftwareHouse.DataAccess.Repositories
 
         public List<ProjectDto> GetAll()
         {
-            return _dbContext.Projects.Select(x => new ProjectDto
-                                      {
-                                          Id = x.Id,
-                                          Name = x.Name,
-                                          Description = x.Description,
-                                          IsDeleted = x.IsDeleted,
-                                          CreationDate = x.CreationDate
-                                      })
-                                      .ToList();
+            return _dbContext.Projects
+                .Where(x => x.IsDeleted == false)
+                .Select(x => new ProjectDto
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Description = x.Description,
+                    IsDeleted = x.IsDeleted,
+                    CreationDate = x.CreationDate
+                })
+                .ToList();
         }
 
         public ProjectDto GetByName(string projectName)
@@ -48,14 +51,14 @@ namespace SoftwareHouse.DataAccess.Repositories
             return null;
         }
 
-        public void Add(ProjectDto project)
+        public void Add(AddProjectDto project)
         {
             _dbContext.Projects.Add(new Project
             {
                 Name = project.Name,
                 Description = project.Description,
-                IsDeleted = project.IsDeleted,
-                CreationDate = project.CreationDate
+                IsDeleted = false,
+                CreationDate = DateTime.Now
             });
 
             _dbContext.SaveChanges();
@@ -67,6 +70,20 @@ namespace SoftwareHouse.DataAccess.Repositories
             project.IsDeleted = true;
 
             _dbContext.SaveChanges();
+        }
+
+        public ProjectDto GetById(int id)
+        {
+            var project = _dbContext.Projects.First(x => x.Id == id);
+
+            return new ProjectDto
+            {
+                Id = project.Id,
+                Name = project.Name,
+                Description = project.Description,
+                CreationDate = project.CreationDate,
+                IsDeleted = project.IsDeleted
+            };
         }
     }
 }

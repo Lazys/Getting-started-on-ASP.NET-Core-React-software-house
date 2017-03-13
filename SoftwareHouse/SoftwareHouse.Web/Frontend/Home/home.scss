@@ -1,0 +1,21 @@
+﻿@import '../Shared/Styles/breakpoints.scss';
+
+.banner {
+    @media (min-width: $breakpoint-md) {
+        margin: 40px 0 100px;
+    }
+}
+
+.banner-text {
+    font-weight: 600;
+    color: #303030;
+}
+
+.category-header {
+    border-bottom: 1px solid #efefef;
+    padding: 10px 0;
+}
+
+.category-content {
+    color: #333;
+}

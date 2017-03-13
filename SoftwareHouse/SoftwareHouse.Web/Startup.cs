@@ -12,6 +12,7 @@ using SoftwareHouse.DataAccess.Models;
 using SoftwareHouse.DataAccess.Repositories;
 using SoftwareHouse.Services.Services;
 using SoftwareHouse.Contract.Interfaces;
+using Newtonsoft.Json.Serialization;
 
 namespace SoftwareHouse.Web
 {
@@ -47,7 +48,10 @@ namespace SoftwareHouse.Web
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
-            services.AddMvc();
+            services.AddMvc().AddJsonOptions(options =>
+            {
+                options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+            });
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();

@@ -10,21 +10,14 @@ namespace SoftwareHouse.Web.Controllers
     {
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction(nameof(ProjectsController.Index), "Projects");
+            }
+            else
+            {
+                return View();
+            }
         }
 
         public IActionResult Error()

@@ -1,0 +1,16 @@
+@media (min-width: 992px) {
+  .banner {
+    margin: 40px 0 100px; } }
+
+.banner-text {
+  font-weight: 600;
+  color: #303030; }
+
+.category-header {
+  border-bottom: 1px solid #efefef;
+  padding: 10px 0; }
+
+.category-content {
+  color: #333; }
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZXMvaG9tZS5jc3MiLCJzb3VyY2VSb290IjoiIn0=*/

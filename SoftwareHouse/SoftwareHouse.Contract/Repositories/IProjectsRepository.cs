@@ -7,7 +7,8 @@ namespace SoftwareHouse.Contract.Interfaces
     {
         List<ProjectDto> GetAll();
         ProjectDto GetByName(string projectName);
-        void Add(ProjectDto project);
+        void Add(AddProjectDto project);
         void Delete(int id);
+        ProjectDto GetById(int id);
     }
 }

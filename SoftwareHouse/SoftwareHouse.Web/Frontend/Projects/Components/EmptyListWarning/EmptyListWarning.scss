@@ -1,0 +1,9 @@
+﻿@import '../../../Shared/Styles/fonts.scss';
+
+.EmptyListWarning {
+    @include custom-font();
+}
+
+.EmptyListWarning-textContainer {
+    margin-top: 20px;
+}
