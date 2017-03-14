@@ -7,6 +7,8 @@
     <div class="col-md-6 col-md-push-3">
         <section>
             <form asp-controller="Projects" asp-action="Add" method="post" class="form-horizontal">
+                @Html.AntiForgeryToken()
+
                 <h4>Create project</h4>
                 <hr />
                 <div class="form-group">
