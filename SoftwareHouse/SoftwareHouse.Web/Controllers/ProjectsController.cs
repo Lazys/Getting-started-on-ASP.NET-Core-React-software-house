@@ -47,6 +47,7 @@ namespace SoftwareHouse.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Add(ProjectCreateViewModel viewModel)
         {
             var result = _projectsService.Add(new AddProjectDto
@@ -67,6 +68,7 @@ namespace SoftwareHouse.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Delete(int id)
         {
             _projectsService.Delete(id);

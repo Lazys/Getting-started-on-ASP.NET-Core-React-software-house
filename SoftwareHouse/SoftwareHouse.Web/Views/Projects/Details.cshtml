@@ -32,6 +32,8 @@
                 </div>
             </div>
             <form action="/Projects/Delete/@Model.Id" method="post">
+                @Html.AntiForgeryToken()
+
                 <button type="submit" class="btn btn-danger pull-right">
                     <span class="glyphicon glyphicon-remove"></span> Delete this project
                 </button>
