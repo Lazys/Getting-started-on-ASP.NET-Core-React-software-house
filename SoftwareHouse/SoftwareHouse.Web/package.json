@@ -2,7 +2,9 @@
   "name": "software-house",
   "version": "0.0.1",
   "description": "Software House - ASP.NET Core & React tutorial",
-  "scripts": {},
+  "scripts": {
+    "test": "jest"
+  },
   "devDependencies": {
     "@types/jest": "^19.2.2",
     "@types/react": "^15.0.10",
