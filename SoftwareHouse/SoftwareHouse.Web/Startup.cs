@@ -13,6 +13,7 @@ using SoftwareHouse.DataAccess.Repositories;
 using SoftwareHouse.Services.Services;
 using SoftwareHouse.Contract.Interfaces;
 using Newtonsoft.Json.Serialization;
+using Microsoft.AspNetCore.Identity;
 
 namespace SoftwareHouse.Web
 {
@@ -76,7 +77,8 @@ namespace SoftwareHouse.Web
                 app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
                 {
                     HotModuleReplacement = true,
-                    ReactHotModuleReplacement = true
+                    ReactHotModuleReplacement = true,
+                    HotModuleReplacementEndpoint = "/dist/__webpack_hmr"
                 });
             }
             else
